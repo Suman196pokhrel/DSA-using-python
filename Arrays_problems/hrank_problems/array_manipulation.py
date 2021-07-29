@@ -25,16 +25,24 @@ import sys
 
 def arrayManipulation(n, queries):
     # Write your code here
-    arr = [0 for i in range(n+1)]
-    for q in queries:
-        a = queries[0]
-        b = queries[1]
-        k = queries[2]
-        arr[a] += k
-        arr
-            
-    val = max(arr)
-    return val
+    arr = [0 for i in range(n+2)]
+    # Prefix-Sum Algorithm 
+    for quer in queries:
+        a = quer[0]
+        b = quer[1]
+        k = quer[2]
+        arr[a-1] = arr[a-1] + k
+        arr[b]= arr[b] + (-k)
+    
+    # simple Max Val Calculation 
+    maxval = 0
+    val = 0
+    for elem in arr:
+        val = val + elem
+        if val > maxval:
+            maxval = val
+    return maxval
+    
 
 if __name__ == '__main__':
 

@@ -16,6 +16,16 @@ def reverseString(st):
      else:
           return st[-1]+ reverseString(st[0:-1:1])
 
-print(reverseString("My name is suman"))
-# a = "suman"
-# print(a[0:-1:1])
+
+
+def is_palindrome(s):
+    if len(s) == 1 or len(s) == 0 :
+        return True
+    else:
+        if s[0] == s[-1]:
+            return is_palindrome(s[1:-1])
+        else:
+            return False
+
+print(is_palindrome("kayak"))
+
