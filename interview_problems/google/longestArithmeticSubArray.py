@@ -8,7 +8,10 @@
 
 arr = [3, 4, 5]
 pd = arr[1] - arr[0] 
+
+# minimum number of integers in array is 2
 curr_max = 2
+#Thus min max length is aldo 2
 final_max = 2
 
 for i in range(2,len(arr)):
