@@ -95,19 +95,20 @@ if __name__ == '__main__':
 
 
      # ll Using ListData 
-     # list1 = [22,33,44,55,66,77]
-     # ll.createll_using_list(listData=list1)
-     # ll.print_data()
+     list1 = [22,33,44,55,66,77]
+     ll.createll_using_list(listData=list1)
+     ll.print_data()
 
      # Length of LL 
-     # print(ll.get_length())
+     print(ll.get_length())
 
 
-     # ll.remove_at(3)
-     # ll.print_data()
+     ll.remove_at(3)
+     ll.print_data()
 
 
      ll.insert_after(133, 4)
+     
      ll.print_data()
 
 
