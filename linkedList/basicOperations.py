@@ -28,7 +28,6 @@ class LinkedList:
           node = Node(data, itr.next)
           itr.next = node
 
-
      def insert_at_end(self,data):
           if self.head is None:
                print('LinkedList is Empty')
