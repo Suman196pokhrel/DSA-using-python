@@ -10,7 +10,12 @@ class LinkedList:
 
      def insert_at_beginning(self, data):
           node = Node(data,self.head)
-          self.head = node
+          if self.head is None:
+               self.head = node
+          
+          else:
+               node.next = self.head
+               self.head = node
 
      def insert_after(self,data,index):
           if index > self.get_length() or index < 0:
