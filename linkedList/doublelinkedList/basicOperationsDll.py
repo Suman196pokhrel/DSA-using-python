@@ -34,6 +34,27 @@ class doubleLinkedList:
                node.prev = self.tail
                self.tail = node
 
+     def insert_after(self,data,index):
+          if index >= self.get_length_dll() or index < 0 :
+               print('index Out of Range')
+          
+          
+          else:
+               node = Node(data)
+               itr = self.head
+               for i in range(index):
+                    print(f"This is  {i} node with data {itr.data}")
+                    itr = itr.next
+
+               # Connection new node to next upcomming node  in the dll sequence
+               node.next = itr.next
+               itr.next.prev = node
+
+               # Connecting new node to previous node in dll sequence
+               itr.next = node
+               node.prev = itr
+          
+
      def print_dllist(self):
           if self.head is None:
                print("Linked List is Empty")
@@ -73,6 +94,12 @@ if __name__ == '__main__':
      ll.insert_at_end(13)
      ll.insert_at_end(14)
      ll.insert_at_end(15)
+
+
+     # ll.insert_after(6.5,0)
+     ll.insert_after(7.5,0)
+
+
 
 
      ll.print_dllist()
