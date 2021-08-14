@@ -69,7 +69,7 @@ class LinkedList:
           llstr = ''
           itr = self.head
           while itr:
-               llstr  =   llstr + str(itr.data)+' ----> '
+               llstr  =   llstr+' ----> ' + str(itr.data)
                itr = itr.next
                 
           print(llstr)
