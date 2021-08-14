@@ -22,20 +22,17 @@ class doubleLinkedList:
                self.head.prev = node
                node.next = self.head
                self.head = node
-               
-                   
+                             
      def insert_at_end(self,data):
+          node = Node(data)
+          if self.head is None:
+               self.head = node
+               self.tail = node
           
-          # if self.head is None:
-          #      self.head = Node(data = data)
-          
-          # else:
-          #      temp = self.head
-          #      while temp.next != None:
-          #           temp = temp.next
-               
-          #      temp.next = Node()
-          pass
+          else:
+               self.tail.next = node
+               node.prev = self.tail
+               self.tail = node
 
      def print_dllist(self):
           if self.head is None:
@@ -70,7 +67,13 @@ if __name__ == '__main__':
      ll.inser_at_start(7)
      ll.inser_at_start(6)
 
-     # print(ll.get_length_dll())
+     print(ll.get_length_dll())
+
+     ll.insert_at_end(12)
+     ll.insert_at_end(13)
+     ll.insert_at_end(14)
+     ll.insert_at_end(15)
+
 
      ll.print_dllist()
      
