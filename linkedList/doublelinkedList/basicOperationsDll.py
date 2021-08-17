@@ -83,8 +83,6 @@ class doubleLinkedList:
                # because, the above steps makes the refrence count to the deleted node Zero which means
                # now python will handel its memory and delete it 
 
-
-
      def print_dllist(self):
           if self.head is None:
                print("Linked List is Empty")
