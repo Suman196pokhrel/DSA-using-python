@@ -39,6 +39,7 @@ def isBalanced(s):
      else:
           return 'NO'      
           
+# Optimized Method 
 def isBalanced(S):
      stack = []
      pairs = {"{": "}", "[": "]", "(" : ")"}
