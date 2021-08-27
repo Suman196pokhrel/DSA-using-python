@@ -1,5 +1,4 @@
 # BruteForce Approach 
-
 def equalStacks(h1, h2, h3):
     sum1, sum2, sum3 = map(sum, (h1, h2, h3))
     while h1 and h2 and h3:
